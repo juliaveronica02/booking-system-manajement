@@ -2,7 +2,7 @@
 module.exports = (sequelize, DataTypes) => {
   const logging = sequelize.define('logging', {
     idUser: DataTypes.INTEGER,
-    username: DataTypes.STRING,
+    email: DataTypes.STRING,
     role: {
       allowNull: false,
       type: DataTypes.ENUM("user", "admin")
