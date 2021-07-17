@@ -29,8 +29,15 @@ module.exports = (sequelize, DataTypes) => {
     quantity: {
       type: DataTypes.INTEGER,
       defaultValue: 1
+    },
+    deletedAt: {
+      type: DataTypes.DATE
     }
-  }, {});
+  }, 
+  {
+    sequelize,
+    paranoid: true // soft delete.
+  });
   car.associate = function(models) {
     // associations can be defined here
   };

@@ -14,5 +14,6 @@ router.post("/register2", adminController.register)
 router.post("/login2", adminController.login)
 router.get("/show-car", car.getData)
 router.post("/create-car", car.create)
+router.delete("/delete-car/:carId", car.deleteById)
 
 module.exports = router;
